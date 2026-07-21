@@ -1,6 +1,58 @@
+<!-- 
 <!DOCTYPE html>
 <html><head><title>w209 site</title></head>
 <body>
 <h2>Hello World! PG</h2>
 <img src="{{url_for('static',filename=file)}}"/>
 </body></html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>w209 site</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Main Responsive Grid Container -->
+    <div class="container my-5">
+        <!-- Header Row -->
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h1 class="display-4">Hello World! PG</h1>
+                <p class="lead text-muted">DATASCI-209 Visualization Dashboard</p>
+            </div>
+        </div>
+
+        <!-- Main Content Grid Row -->
+        <div class="row align-items-center">
+            <!-- Left Column: Visualization / Image Asset -->
+            <div class="col-md-7 col-12 mb-4">
+                <div class="card shadow-sm p-2">
+                    <img src="{{ url_for('static', filename=file) }}" class="img-fluid rounded" alt="Dynamic Visualization">
+                </div>
+            </div>
+
+            <!-- Right Column: Controls / Description Panel -->
+            <div class="col-md-5 col-12 mb-4">
+                <div class="card shadow-sm p-4">
+                    <h5 class="card-title">Visualization Details</h5>
+                    <p class="card-text text-secondary">
+                        This layout utilizes Bootstrap's 12-column grid. On desktop screens, this panel sits beside the visual asset (`col-md-5`), and on mobile devices, it stacks cleanly below (`col-12`).
+                    </p>
+                    <button class="btn btn-primary btn-block mt-3">Interactive Filter Control</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 4 JS Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
